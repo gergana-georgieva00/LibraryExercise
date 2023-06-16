@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace Library.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         [AllowAnonymous]
         public IActionResult Index()
