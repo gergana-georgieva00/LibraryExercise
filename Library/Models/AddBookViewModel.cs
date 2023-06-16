@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Library.Data.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Library.Models
 {
@@ -18,7 +19,8 @@ namespace Library.Models
         [Required]
         [Range(0.0, 10.0)]
         public decimal Rating { get; set; }
-        [Required]
-        public string Category { get; set; } = null!;
+        //[Range(1, int.MaxValue)]
+        public int CategoryId { get; set; }
+        public IEnumerable<CategoryViewModel> Categories { get; set; } = new List<CategoryViewModel>();
     }
 }
