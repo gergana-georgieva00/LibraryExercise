@@ -7,7 +7,7 @@ namespace Library.Data.Models
     public class IdentityUserBook
     {
         [Required]
-        public int CollectorId { get; set; }
+        public string CollectorId { get; set; }
         [ForeignKey(nameof(CollectorId))]
         public IdentityUser Collector { get; set; } = null!;
         [Required]
