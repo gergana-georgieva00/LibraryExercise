@@ -15,7 +15,7 @@ namespace Library.Models
         [MinLength(5), MaxLength(5000)]
         public string Description { get; set; } = null!;
         [Required]
-        public string ImageUrl { get; set; } = null!;
+        public string Url { get; set; } = null!;
         [Required]
         [Range(0.0, 10.0)]
         public decimal Rating { get; set; }
