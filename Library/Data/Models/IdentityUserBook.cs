@@ -6,11 +6,11 @@ namespace Library.Data.Models
 {
     public class IdentityUserBook
     {
-        [Key]
+        [Required]
         public int CollectorId { get; set; }
         [ForeignKey(nameof(CollectorId))]
         public IdentityUser Collector { get; set; } = null!;
-        [Key]
+        [Required]
         public int BookId { get; set; }
         [ForeignKey(nameof(BookId))]
         public Book Book { get; set; } = null!;
